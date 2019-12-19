@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<html>
+  <head>
+    <title>index</title>
+  </head>
+  <head th:replace="common/js-header::js-head">
+  </head>
+  <body>
+    <div id="all">
+      <!-- Top bar-->
+      <div class="top-bar">
+        <div class="container">
+          <div class="row d-flex align-items-center">
+            <div class="col-md-6 d-md-block d-none">
+              <p>Contact us on +420 777 555 333 or hello@universal.com.</p>
+            </div>
+            <div class="col-md-6">
+              <div class="d-flex justify-content-md-end justify-content-between">
+                <ul class="list-inline contact-info d-block d-md-none">
+                  <li class="list-inline-item"><a href="#"><i class="fa fa-phone"></i></a></li>
+                  <li class="list-inline-item"><a href="#"><i class="fa fa-envelope"></i></a></li>
+                </ul>
+                <div class="login"><a href="#" data-toggle="modal" data-target="#login-modal" class="login-btn"><i class="fa fa-sign-in"></i><span class="d-none d-md-inline-block">登录</span></a><a href="customer-register.html" class="signup-btn"><i class="fa fa-user"></i><span class="d-none d-md-inline-block">注销</span></a></div>
+                <ul class="social-custom list-inline">
+                  <li class="list-inline-item"><a href="#"><i class="fa fa-facebook"></i></a></li>
+                  <li class="list-inline-item"><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                  <li class="list-inline-item"><a href="#"><i class="fa fa-twitter"></i></a></li>
+                  <li class="list-inline-item"><a href="#"><i class="fa fa-envelope"></i></a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Top bar end-->
+      <!-- Login Modal-->
+      <div id="login-modal" tabindex="-1" role="dialog" aria-labelledby="login-modalLabel" aria-hidden="true" class="modal fade">
+        <div role="document" class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h4 id="login-modalLabel" class="modal-title">Customer Login</h4>
+              <button type="button" data-dismiss="modal" aria-label="Close" class="close"><span aria-hidden="true">×</span></button>
+            </div>
+            <div class="modal-body">
+              <form action="customer-orders.html" method="get">
+                <div class="form-group">
+                  <input id="email_modal" type="text" placeholder="email" class="form-control">
+                </div>
+                <div class="form-group">
+                  <input id="password_modal" type="password" placeholder="password" class="form-control">
+                </div>
+                <p class="text-center">
+                  <button class="btn btn-template-outlined"><i class="fa fa-sign-in"></i> Log in</button>
+                </p>
+              </form>
+              <p class="text-center text-muted">Not registered yet?</p>
+              <p class="text-center text-muted"><a href="customer-register.html"><strong>Register now</strong></a>! It is easy and done in 1 minute and gives you access to special discounts and much more!</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Login modal end-->
+      <!-- Navbar Start-->
+      <header class="nav-holder make-sticky">
+        <div id="navbar" role="navigation" class="navbar navbar-expand-lg">
+          <div class="container"><a href="index.html" class="navbar-brand home"><img src="img/logo.png" alt="Universal logo" class="d-none d-md-inline-block"><img src="img/logo-small.png" alt="Universal logo" class="d-inline-block d-md-none"><span class="sr-only">Universal - go to homepage</span></a>
+            <button type="button" data-toggle="collapse" data-target="#navigation" class="navbar-toggler btn-template-outlined"><span class="sr-only">Toggle navigation</span><i class="fa fa-align-justify"></i></button>
+            <div id="navigation" class="navbar-collapse collapse">
+              <ul class="nav navbar-nav ml-auto">
+                <li class="nav-item dropdown "><a href="javascript: void(0)" data-toggle="dropdown" >主页<b class="caret"></b></a>
+                </li>
+                <li class="nav-item dropdown menu-large"><a href="blog-medium.html" data-toggle="dropdown" >博客<b class="caret"></b></a>
+                </li>
+                <!-- ========== FULL WIDTH MEGAMENU END ==================-->
+                <!-- ========== Contact dropdown ==================-->
+                <li class="nav-item dropdown"><a href="javascript: void(0)" data-toggle="dropdown" class="dropdown-toggle">Contact <b class="caret"></b></a>
+                  <ul class="dropdown-menu">
+                    <li class="dropdown-item"><a href="contact.html" class="nav-link">Contact option 1</a></li>
+                    <li class="dropdown-item"><a href="contact2.html" class="nav-link">Contact option 2</a></li>
+                    <li class="dropdown-item"><a href="contact3.html" class="nav-link">Contact option 3</a></li>
+                  </ul>
+                </li>
+                <!-- ========== Contact dropdown end ==================-->
+              </ul>
+            </div>
+            <div id="search" class="collapse clearfix">
+              <form role="search" class="navbar-form">
+                <div class="input-group">
+                  <input type="text" placeholder="Search" class="form-control"><span class="input-group-btn">
+                    <button type="submit" class="btn btn-template-main"><i class="fa fa-search"></i></button></span>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </header>
+      <!-- Navbar End-->
+      
+      <section class="no-mb relative-positioned">
+        <!--
+        *** JUMBOTRON ***
+        _________________________________________________________
+        -->
+        <div style="background: url('img/photogrid.jpg') center center repeat; background-size: cover;" class="jumbotron relative-positioned color-white text-md-center">
+          <div class="dark-mask mask-primary"></div>
+          <div class="container">
+            <div class="row mb-small">
+              <div class="col-md-12 text-center">
+                <h1 class="text-uppercase">Universal is great</h1>
+                <h2 class="text-uppercase">Last week more than 100 companies signed up to help them in their projects.</h2>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6 mb-small"><img src="img/template-mac.png" alt="..." class="img-fluid"></div>
+              <div class="col-md-6 text-center-sm">
+                <p class="text-uppercase text-bold">Business. Corporate. Agency.<br>Portfolio. Blog. E-commerce.<br>We have covered everything.</p>
+                <p class="no-letter-spacing">See our current packages comparison<br>to choose the right one for you.</p>
+                <p><a href="#packages" class="scroll-to btn btn-template-outlined-white">See packages</a></p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- *** JUMBOTRON END ***-->
+      </section>
+      <section class="bar bg-gray no-mb padding-big text-md-center">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6">
+              <h2 class="text-uppercase">Everything you need</h2>
+              <p class="lead mb-small">40+ prepared HTML templates</p>
+              <p class="mb-small">We have prepared literally <strong>everything you would possibly need building corporate, e-commerce or portfolio website. If you still miss something, let us know and we will try to include it in theme's future updates.</strong></p>
+              <p><a href="#" class="btn btn-template-main">Read more</a></p>
+            </div>
+            <div class="col-md-6 text-center"><img src="img/template-easy-customize.png" alt="" class="img-fluid"></div>
+          </div>
+        </div>
+      </section>
+      <section class="bar no-mb color-white padding-big text-md-center bg-primary">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6 text-center"><img src="img/template-easy-code.png" alt="" class="img-fluid"></div>
+            <div class="col-md-6">
+              <h2 class="text-uppercase">Clean, valid and documented code & support</h2>
+              <p class="lead mb-small">We made our best to help you</p>
+              <p class="mb-small">Everything in this template is properly named and categorized. In case you don't find in the documentation answer to your question, our support is here to help!</p>
+              <p><a href="#" class="btn btn-template-outlined-white">Read more</a></p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="bar bg-gray no-mb padding-big text-center-sm">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6">
+              <h2 class="text-uppercase">Easy to customize</h2>
+              <p class="mb-small">We have made this template with focus on future client customization. You get <strong>40+ prepared HTML templates</strong>, many <strong>reusable components</strong> and <strong>LESS files</strong> for even easier template customization.</p>
+              <p><a href="#" class="btn btn-template-main">Read more</a></p>
+            </div>
+            <div class="col-md-6 text-center"><img src="img/template-easy-customize.png" alt="" class="img-fluid"></div>
+          </div>
+        </div>
+      </section>
+      <section id="packages" class="bar no-mb">
+        <div data-animate="fadeInUp" class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="heading text-center">
+                <h2>Packages we offer</h2>
+              </div>
+              <p class="lead">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+              <!-- Packages Start-->
+              <div class="row packages">
+                <div class="col-md-3">
+                  <div class="package">
+                    <div class="package-header light-gray">
+                      <h5>Basic</h5>
+                    </div>
+                    <div class="price">
+                      <div class="price-container d-flex align-items-end justify-content-center">
+                        <h4 class="h1"><span class="currency">$</span>7</h4><span class="period">/ month</span>
+                      </div>
+                    </div>
+                    <ul class="list-unstyled">
+                      <li><i class="fa fa-check"></i>100GB Storage</li>
+                      <li><i class="fa fa-check"></i>Own config file</li>
+                      <li><i class="fa fa-times"></i>Sharing Tools</li>
+                      <li><i class="fa fa-times"></i>Auto Backup</li>
+                      <li><i class="fa fa-times"></i>Extended Security</li>
+                    </ul><a href="#" class="btn btn-template-outlined">Sign Up</a>
+                  </div>
+                </div>
+                <!-- / END FIRST PACKAGE-->
+                <div class="col-md-3">
+                  <div class="package">
+                    <div class="package-header light-gray">
+                      <h5>Standard</h5>
+                    </div>
+                    <div class="price">
+                      <div class="price-container d-flex align-items-end justify-content-center">
+                        <h4 class="h1"><span class="currency">$</span>21</h4><span class="period">/ month</span>
+                      </div>
+                    </div>
+                    <ul class="list-unstyled">
+                      <li><i class="fa fa-check"></i>100GB Storage</li>
+                      <li><i class="fa fa-check"></i>Own config file</li>
+                      <li><i class="fa fa-times"></i>Sharing Tools</li>
+                      <li><i class="fa fa-times"></i>Auto Backup</li>
+                      <li><i class="fa fa-times"></i>Extended Security</li>
+                    </ul><a href="#" class="btn btn-template-outlined">Sign Up</a>
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <div class="best-value">
+                    <div class="package">
+                      <div class="package-header bg-primary color-white">
+                        <div class="content">
+                          <h5>Premium</h5>
+                          <div class="meta-text">Best Value</div>
+                        </div>
+                      </div>
+                      <div class="price-container d-flex align-items-end justify-content-center">
+                        <h4 class="h1"><span class="currency">$</span>53</h4><span class="period">/ month</span>
+                      </div>
+                      <ul class="list-unstyled">
+                        <li><i class="fa fa-check"></i>100GB Storage</li>
+                        <li><i class="fa fa-check"></i>Own config file</li>
+                        <li><i class="fa fa-times"></i>Sharing Tools</li>
+                        <li><i class="fa fa-times"></i>Auto Backup</li>
+                        <li><i class="fa fa-times"></i>Extended Security</li>
+                      </ul><a href="#" class="btn btn-template-outlined">Sign Up</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <div class="package">
+                    <div class="package-header light-gray">
+                      <h5>Ultimate</h5>
+                    </div>
+                    <div class="price-container d-flex align-items-end justify-content-center">
+                      <h4 class="h1"><span class="currency">$</span>99</h4><span class="period">/ month</span>
+                    </div>
+                    <ul class="list-unstyled">
+                      <li><i class="fa fa-check"></i>100GB Storage</li>
+                      <li><i class="fa fa-check"></i>Own config file</li>
+                      <li><i class="fa fa-times"></i>Sharing Tools</li>
+                      <li><i class="fa fa-times"></i>Auto Backup</li>
+                      <li><i class="fa fa-times"></i>Extended Security</li>
+                    </ul><a href="#" class="btn btn-template-outlined">Sign Up</a>
+                  </div>
+                </div>
+              </div>
+              <!-- Packages End-->
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- GET IT-->
+      <div class="get-it">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-8 text-center p-3">
+              <h3>Do you want cool website like this one?</h3>
+            </div>
+            <div class="col-lg-4 text-center p-3">   <a href="#" class="btn btn-template-outlined-white">Buy this template now</a></div>
+          </div>
+        </div>
+      </div>
+      <!-- FOOTER -->
+      <footer class="main-footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-3">
+              <h4 class="h6">About Us</h4>
+              <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+              <hr>
+              <h4 class="h6">Join Our Monthly Newsletter</h4>
+              <form>
+                <div class="input-group">
+                  <input type="text" class="form-control">
+                  <div class="input-group-append">
+                    <button type="button" class="btn btn-secondary"><i class="fa fa-send"></i></button>
+                  </div>
+                </div>
+              </form>
+              <hr class="d-block d-lg-none">
+            </div>
+            <div class="col-lg-3">
+              <h4 class="h6">Blog</h4>
+              <ul class="list-unstyled footer-blog-list">
+                <li class="d-flex align-items-center">
+                  <div class="image"><img src="img/detailsquare.jpg" alt="..." class="img-fluid"></div>
+                  <div class="text">
+                    <h5 class="mb-0"> <a href="post.html">Blog post name</a></h5>
+                  </div>
+                </li>
+                <li class="d-flex align-items-center">
+                  <div class="image"><img src="img/detailsquare.jpg" alt="..." class="img-fluid"></div>
+                  <div class="text">
+                    <h5 class="mb-0"> <a href="post.html">Blog post name</a></h5>
+                  </div>
+                </li>
+                <li class="d-flex align-items-center">
+                  <div class="image"><img src="img/detailsquare.jpg" alt="..." class="img-fluid"></div>
+                  <div class="text">
+                    <h5 class="mb-0"> <a href="post.html">Very very long blog post name</a></h5>
+                  </div>
+                </li>
+              </ul>
+              <hr class="d-block d-lg-none">
+            </div>
+            <div class="col-lg-3">
+              <h4 class="h6">Contact</h4>
+              <p class="text-uppercase"><strong>Universal Ltd.</strong><br>13/25 New Avenue <br>Newtown upon River <br>45Y 73J <br>England <br><strong>Great Britain</strong></p><a href="contact.html" class="btn btn-template-main">Go to contact page</a>
+              <hr class="d-block d-lg-none">
+            </div>
+            <div class="col-lg-3">
+              <ul class="list-inline photo-stream">
+                <li class="list-inline-item"><a href="#"><img src="img/detailsquare.jpg" alt="..." class="img-fluid"></a></li>
+                <li class="list-inline-item"><a href="#"><img src="img/detailsquare2.jpg" alt="..." class="img-fluid"></a></li>
+                <li class="list-inline-item"><a href="#"><img src="img/detailsquare3.jpg" alt="..." class="img-fluid"></a></li>
+                <li class="list-inline-item"><a href="#"><img src="img/detailsquare3.jpg" alt="..." class="img-fluid"></a></li>
+                <li class="list-inline-item"><a href="#"><img src="img/detailsquare2.jpg" alt="..." class="img-fluid"></a></li>
+                <li class="list-inline-item"><a href="#"><img src="img/detailsquare.jpg" alt="..." class="img-fluid"></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="copyrights">
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-4 text-center-md">
+                <p>&copy; 2019. Your company / name goes here</p>
+              </div>
+              <div class="col-lg-8 text-right text-center-md">
+                <p>More Templates <a href="http://www.cssmoban.com/" target="_blank" title="模板之家">模板之家</a> - Collect from <a href="http://www.cssmoban.com/" title="网页模板" target="_blank">网页模板</a></p>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <!-- Javascript files-->
+    <div th:replace="common/js-footer::js-foot"></div>
+  </body>
+</html>
