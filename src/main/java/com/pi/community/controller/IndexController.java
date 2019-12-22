@@ -2,7 +2,6 @@ package com.pi.community.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
 
 /**
  * @author Mendax
@@ -11,8 +10,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 @Controller
 public class IndexController {
 
-
-    @GetMapping("blog")
+    @GetMapping("/blog")
     public String blog(){
         return "blog";
     }
