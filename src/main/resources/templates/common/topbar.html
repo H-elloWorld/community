@@ -17,9 +17,10 @@
                         <li class="list-inline-item"><a href="#"><i class="fa fa-phone"></i></a></li>
                         <li class="list-inline-item"><a href="#"><i class="fa fa-envelope"></i></a></li>
                     </ul>
-                    <div class="login"><a href="#" data-toggle="modal" data-target="#login-modal" class="login-btn"><i class="fa fa-sign-in"></i><span class="d-none d-md-inline-block">登录</span></a><a href="customer-register.html" class="signup-btn"><i class="fa fa-user"></i><span class="d-none d-md-inline-block">注销</span></a></div>
+                    <div class="login" th:if="${session.user==null}"><a href="#" data-toggle="modal" data-target="#login-modal" class="login-btn"><i class="fa fa-sign-in"></i><span class="d-none d-md-inline-block">登录</span></a></div>
+                    <div class="user" style="float: left" th:if="${session.user!=null}"><a href="#"  class="login-btn"><i class="fa fa-user"></i><span class="d-none d-md-inline-block" th:text="${session.user.getName()}"></span></a><a href="#"  class="login-btn"><i class="fa fa-sign-out"></i><span class="d-none d-md-inline-block">注销</span></a></div>
                     <ul class="social-custom list-inline">
-                        <li class="list-inline-item"><a href="#"><i class="fa fa-facebook"></i></a></li>
+                        <li class="list-inline-item"><a href="https://github.com/login/oauth/authorize?client_id=aa2fd3ef4d37ce676c47&redirect_uri=http://localhost:8080/callback&scope=user&state=1"><i class="fa fa-github"></i></a></li>
                         <li class="list-inline-item"><a href="#"><i class="fa fa-google-plus"></i></a></li>
                         <li class="list-inline-item"><a href="#"><i class="fa fa-twitter"></i></a></li>
                         <li class="list-inline-item"><a href="#"><i class="fa fa-envelope"></i></a></li>
